@@ -1,0 +1,17 @@
+{
+  "name": "node-decompress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "installPlugin": "node ./pluginInstaller.js",
+    "listPlugins": "node ./pluginList.js",
+    "runPlugin": "node ./pluginRunner.js",
+    "clean": "node -e \"require('rmdir')('./plugins', function (err, dirs, files) { if (err) { console.log(err); } else { require('fs').mkdir('plugins', function(err) { if (err) { console.log(err); } else { console.log('all plugins are removed'); } }); } });\""
+  },
+  "dependencies": {
+    "decompress": "^4.2.0",
+    "edge-js": "^10.3.0",
+    "rmdir": "^1.2.0"
+  }
+}
